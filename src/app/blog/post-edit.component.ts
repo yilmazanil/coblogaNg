@@ -22,6 +22,8 @@ export class PostEditComponent implements OnInit {
   //     console.log(content);
   // }
   OnEditorSave(content) {
+    this.postContent.Body = content;
+    this.blogService.update(this.postContent);
     console.log('Saved: ' + content);
   }
   ngOnInit(): void {

@@ -16,8 +16,17 @@ export class BlogService {
 
         return this.http.get(this.postsUrl)
             .toPromise()
-            .then(response => response.json().data as BlogPost[])
+            .then(response => this.trimPosts(response))
             .catch(this.handleError);
+    }
+    private trimPosts(response) :BlogPost[]
+    {
+        var posts = response.json().data as BlogPost[];
+        for(let post of posts)
+        {
+            post.Body = post.Body.substring(0,50);
+        }
+        return posts;     
     }
     getPost(id: number): Promise<BlogPost> {
         const url = `${this.postsUrl}/${id}`;
