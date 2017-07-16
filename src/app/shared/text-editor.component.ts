@@ -37,9 +37,9 @@ export class TextEditorComponent implements AfterViewInit, OnDestroy {
         { text: 'C++', value: 'cpp' }
       ],
       menubar: false,
-      codesample_content_css: 'assets/prism/prism.css',
+      codesample_content_css: '../assets/prism/prism.css',
       toolbar: "codesample | code | undo redo | insert | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | save",
-      skin_url: 'assets/skins/tinymce/lightgray',
+      skin_url: '../assets/skins/tinymce/lightgray',
       branding: false,
       height: 300,
       statusbar: false,
@@ -55,6 +55,10 @@ export class TextEditorComponent implements AfterViewInit, OnDestroy {
       },
       save_onsavecallback: () => { this.onEditorSave.emit(this.editor.getContent()) }
     });
+  }
+  UpdateContent(content:String)
+  {
+    this.editor.setContent(content);    
   }
   ngOnDestroy() {
     tinymce.remove(this.editor);
