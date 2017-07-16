@@ -6,10 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  title:String = 'app';
+  editorContent:String = '<b>testContent for Editor </b>'
 
-  OnTextEditorKeyUp(content)
+  // OnTextEditorKeyUp(content)
+  // {
+  //     console.log(content);
+  // }
+  OnEditorSave(content)
   {
-      console.log(content);
+      console.log('Saved: ' + content);
   }
 }

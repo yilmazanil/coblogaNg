@@ -1,6 +1,7 @@
 <tinymce-editor
   [elementId]="'TextEditorSampleId'"
-  (onEditorKeyup)="OnTextEditorKeyUp($event)"
+  [editorContent] = +editorContent
+  (onEditorSave)="OnEditorSave($event)"
   >
 </tinymce-editor>
 

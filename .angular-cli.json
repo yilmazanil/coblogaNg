@@ -29,6 +29,7 @@
         "../node_modules/tinymce/plugins/table/plugin.js",
         "../node_modules/tinymce/plugins/codesample/plugin.js",
         "../node_modules/tinymce/plugins/code/plugin.js",
+        "../node_modules/tinymce/plugins/save/plugin.js",
         "../node_modules/prismjs/prism.js"
       ],
       "environmentSource": "environments/environment.ts",
