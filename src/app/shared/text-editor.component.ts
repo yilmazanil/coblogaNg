@@ -13,7 +13,7 @@ import {
 })
 export class TextEditorComponent implements AfterViewInit, OnDestroy {
   @Input() elementId: String;
-  @Input() editorContent : String;
+  @Input() editorContent: String;
   // @Output() onEditorKeyup = new EventEmitter<any>();
   @Output() onEditorSave = new EventEmitter<any>();
 
@@ -53,7 +53,7 @@ export class TextEditorComponent implements AfterViewInit, OnDestroy {
           editor.setContent(this.editorContent);
         });
       },
-      save_onsavecallback: () =>{ this.onEditorSave.emit(this.editor.getContent())}
+      save_onsavecallback: () => { this.onEditorSave.emit(this.editor.getContent()) }
     });
   }
   ngOnDestroy() {
