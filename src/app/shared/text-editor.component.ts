@@ -20,7 +20,7 @@ export class TextEditorComponent implements AfterViewInit, OnDestroy {
   ngAfterViewInit() {
     tinymce.init({
       selector: '#' + this.elementId,
-      plugins: ['link', 'paste', 'table', 'codesample'],
+      plugins: ['link', 'paste', 'table', 'codesample','code'],
       codesample_languages: [
         {text: 'HTML/XML', value: 'markup'},
         {text: 'JavaScript', value: 'javascript'},
@@ -34,7 +34,7 @@ export class TextEditorComponent implements AfterViewInit, OnDestroy {
         {text: 'C++', value: 'cpp'}
       ],
       codesample_content_css:'assets/prism/prism.css',
-      toolbar: "codesample",
+      toolbar: "codesample | code | undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent",
       skin_url: 'assets/skins/tinymce/lightgray',
       branding: false,
       height : 300,
