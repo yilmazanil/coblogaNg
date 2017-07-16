@@ -23,6 +23,9 @@ export class PostListComponent implements OnInit {
     editPost(post:BlogPost): void {
         this.router.navigate(['/editpost', post.id]);
     }
+    readPost(post:BlogPost): void {
+        this.router.navigate(['/readpost', post.id]);
+    }
     ngOnInit(): void {
         this.getPosts();
     }

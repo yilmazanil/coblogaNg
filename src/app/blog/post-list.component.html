@@ -1,4 +1,5 @@
 <div *ngFor="let post of posts">
     <span class="badge">Id:{{post.id}}</span> Body: {{post.Body}}
     <button class="edit" (click)="editPost(post); $event.stopPropagation()">edit</button>
+    <button class="read" (click)="readPost(post); $event.stopPropagation()">read</button>
 </div>
