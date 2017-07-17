@@ -7,5 +7,4 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title: String = 'app';
-  postId : number = 1;
 }
