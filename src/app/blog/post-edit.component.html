@@ -1,2 +1,4 @@
-<tinymce-editor [elementId]="'TextEditorSampleId'" [editorContent]=+editorContent (onEditorSave)="OnEditorSave($event)">
-</tinymce-editor>
+<div *ngIf="postContent">
+    <tinymce-editor #editorRef [elementId]="'TextEditorSampleId'" [editorContent]=+postContent.Body (onEditorSave)="OnEditorSave($event)">
+    </tinymce-editor>
+</div>

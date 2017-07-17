@@ -13,6 +13,7 @@ import { PostReadComponent } from "./blog/post-read.component";
 import { PostListComponent } from "./blog/post-list.component";
 
 import { BlogService } from "./blog/blog-service.component";
+import { AppRoutingModule } from "./app-routing.module";
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { BlogService } from "./blog/blog-service.component";
   imports: [
     BrowserModule,
     HttpModule,
-    InMemoryWebApiModule.forRoot(InMemoryDataService)
+    InMemoryWebApiModule.forRoot(InMemoryDataService),
+    AppRoutingModule
   ],
   providers: [BlogService],
   bootstrap: [AppComponent]
