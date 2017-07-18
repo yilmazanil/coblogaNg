@@ -1,0 +1,10 @@
+<div id="search-component">
+    <h2>Blog  Search</h2>
+    <input #searchBox id="search-box" (keyup)="search(searchBox.value)" />
+    <div>
+        <div *ngFor="let post of blogPosts | async" class="search-result">
+            <button class="read" (click)="gotoDetail(post); $event.stopPropagation()">read</button>
+            {{post.Body}} 
+        </div>
+    </div>
+</div>
