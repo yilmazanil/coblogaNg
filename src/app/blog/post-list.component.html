@@ -1,5 +1,12 @@
 <div *ngFor="let post of posts">
-    <span class="badge">Id:{{post.id}}</span> Body: {{post.Body}}
+    <span class="badge">Id:{{post.id}}</span> 
+    <span>Heading: {{post.Heading}}</span> 
+    <span>Body: {{post.Body}}</span>
+    <span>Tags : </span>
+    <span *ngFor="let tag of post.Tags">
+        {{tag.Name}}
+    </span>
+
     <button class="edit" (click)="editPost(post); $event.stopPropagation()">edit</button>
     <button class="read" (click)="readPost(post); $event.stopPropagation()">read</button>
 </div>

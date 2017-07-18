@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, ViewEncapsulation, AfterViewChecked } from '@angular/core';
 import { BlogService } from "./blog-service.component";
-import { BlogPost } from "./post";
+import { BlogPost } from "./blog-post";
 import { ActivatedRoute, ParamMap } from "@angular/router";
 
 

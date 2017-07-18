@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { BlogPost } from "./post";
+import { BlogPost } from "./blog-post";
 import { BlogService } from "./blog-service.component";
 import { Router } from "@angular/router";
 

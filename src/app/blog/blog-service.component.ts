@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Headers, Http } from '@angular/http';
 
 import 'rxjs/add/operator/toPromise';
-import { BlogPost } from "./post";
+import { BlogPost } from "./blog-post";
 
 @Injectable()
 export class BlogService {
