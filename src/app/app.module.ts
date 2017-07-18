@@ -12,8 +12,9 @@ import { PostEditComponent } from "./blog/post-edit.component";
 import { PostReadComponent } from "./blog/post-read.component";
 import { PostListComponent } from "./blog/post-list.component";
 
-import { BlogService } from "./blog/blog-service.component";
 import { AppRoutingModule } from "./app-routing.module";
+import { BlogService } from "./blog/blog.service";
+import { BlogSearchComponent } from "./blog/blog-search.component";
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { AppRoutingModule } from "./app-routing.module";
     TextEditorComponent,
     PostEditComponent,
     PostReadComponent,
-    PostListComponent
+    PostListComponent,
+    BlogSearchComponent
   ],
   imports: [
     BrowserModule,
