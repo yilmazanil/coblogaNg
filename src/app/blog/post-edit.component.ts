@@ -32,6 +32,6 @@ export class PostEditComponent implements OnInit {
       .subscribe(postContent => this.postContent = postContent);
   }
   joinTags(): string {
-    return this.postContent.Tags.map(function(elem){return elem.Name;}).join(";");
+    return this.postContent.Tags.map(function(elem){return elem.name;}).join(";");
   }
 }

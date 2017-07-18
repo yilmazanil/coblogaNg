@@ -7,7 +7,7 @@
     <div>
         <div>
             <span *ngFor="let tag of activePost.Tags">
-        {{tag.Name}}
+        {{tag.name}}
         </span>
         </div>
         <button class="edit" (click)="editPost(); $event.stopPropagation()">edit</button>

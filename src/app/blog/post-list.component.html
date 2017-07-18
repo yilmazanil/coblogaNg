@@ -6,7 +6,7 @@
     <span>Body: {{post.Body}}</span>
     <span>Tags : </span>
     <span *ngFor="let tag of post.Tags">
-        {{tag.Name}}
+        {{tag.name}}
     </span>
     <button class="read" (click)="readPost(post); $event.stopPropagation()">read</button>
 </div>

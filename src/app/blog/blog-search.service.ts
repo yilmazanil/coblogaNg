@@ -3,7 +3,7 @@ import { Http } from '@angular/http';
 
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
-import { BlogPost } from "./post";
+import { BlogPost } from "./blog-post";
 
 @Injectable()
 export class BlogSearchService {
