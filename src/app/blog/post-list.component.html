@@ -8,7 +8,5 @@
     <span *ngFor="let tag of post.Tags">
         {{tag.Name}}
     </span>
-
-    <button class="edit" (click)="editPost(post); $event.stopPropagation()">edit</button>
     <button class="read" (click)="readPost(post); $event.stopPropagation()">read</button>
 </div>

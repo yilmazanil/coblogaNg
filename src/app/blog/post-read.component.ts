@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, ViewEncapsulation, AfterViewChecked } from '@angular/core';
 import { BlogPost } from "./blog-post";
-import { ActivatedRoute, ParamMap } from "@angular/router";
+import { ActivatedRoute, ParamMap, Router } from "@angular/router";
 import { BlogService } from "./blog.service";
 
 
@@ -17,7 +17,8 @@ export class PostReadComponent implements OnInit, AfterViewChecked {
 
   constructor(
     private blogService: BlogService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router: Router
   ) { }
   ngOnInit(): void {
     //this.blogService.getPost(this.postId).then(post => this.activePost = post);
@@ -30,6 +31,9 @@ export class PostReadComponent implements OnInit, AfterViewChecked {
       this.initialized = true;
       Prism.highlightAll();
     }
+  }
+  editPost() : void{
+      this.router.navigate(['/editpost',this.activePost.id]);
   }
 
 }

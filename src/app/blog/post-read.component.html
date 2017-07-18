@@ -1,4 +1,17 @@
 <div *ngIf="activePost">
+    <div>
+        <h2>{{activePost.Heading}}</h2>
+    </div>
     <div [innerHTML]=+activePost.Body>
+    </div>
+    <div>
+        <div>
+            <span *ngFor="let tag of activePost.Tags">
+        {{tag.Name}}
+        </span>
+        </div>
+        <button class="edit" (click)="editPost(); $event.stopPropagation()">edit</button>
+        <div>
+        </div>
     </div>
 </div>

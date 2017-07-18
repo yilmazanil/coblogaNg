@@ -31,4 +31,7 @@ export class PostEditComponent implements OnInit {
       .switchMap((params: ParamMap) => this.blogService.getPost(+params.get('id')))
       .subscribe(postContent => this.postContent = postContent);
   }
+  joinTags(): string {
+    return this.postContent.Tags.map(function(elem){return elem.Name;}).join(";");
+  }
 }
