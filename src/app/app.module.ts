@@ -18,8 +18,17 @@ import { PostListComponent } from "./blog/post-list.component";
 import { AppRoutingModule } from "./app-routing.module";
 import { BlogService } from "./blog/blog.service";
 import { BlogSearchComponent } from "./blog/blog-search.component";
-import { CustomTagInputComponent } from "./tag-input/tag-input.component";
+import { TagAreaComponent } from "./tag-input/tag-area.component";
 
+TagInputModule.withDefaults({
+  tagInput: {
+        placeholder: 'Yeni Etiket',
+        identifyBy: 'id',
+        displayBy : 'name',
+        maxItems : 10,
+        animationDuration : {enter: '0ms', leave: '0ms'}
+    }
+});
 
 @NgModule({
   declarations: [
@@ -29,7 +38,7 @@ import { CustomTagInputComponent } from "./tag-input/tag-input.component";
     PostReadComponent,
     PostListComponent,
     BlogSearchComponent,
-    CustomTagInputComponent
+    TagAreaComponent
   ],
   imports: [
     BrowserModule,
