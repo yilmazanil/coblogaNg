@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { PostReadComponent } from "./blog/post-read.component";
 import { PostEditComponent } from "./blog/post-edit.component";
 import { PostListComponent } from "./blog/post-list.component";
+import { CustomTagInputComponent } from "./tag-input/tag-input.component";
 
 
 
@@ -11,6 +12,7 @@ const routes: Routes = [
     { path: 'readpost/:id', component: PostReadComponent },
     { path: 'editpost/:id', component: PostEditComponent },
     { path: 'posts', component: PostListComponent },
+    { path: 'tags', component: CustomTagInputComponent },
 ];
 
 @NgModule({
