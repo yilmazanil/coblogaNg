@@ -1,6 +1,7 @@
 <div *ngIf="postContent">
     <input type="text" [value]="postContent.Heading" />
-    <tinymce-editor #editorRef [elementId]="'TextEditorSampleId'" [editorContent]=+postContent.Body (onEditorSave)="OnEditorSave($event)">
+    <tinymce-editor [elementId]="'TextEditorSampleId'" [editorContent]=+postContent.Body>
     </tinymce-editor>
-    <span>{{joinTags()}}</span>
+    <tag-area [items]="postContent.Tags"></tag-area>
+    <button (click)="Save(); $event.stopPropagation()">Save</button>
 </div>

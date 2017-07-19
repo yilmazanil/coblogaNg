@@ -15,7 +15,7 @@ export class TextEditorComponent implements AfterViewInit, OnDestroy {
   @Input() elementId: String;
   @Input() editorContent: String;
   // @Output() onEditorKeyup = new EventEmitter<any>();
-  @Output() onEditorSave = new EventEmitter<any>();
+  //@Output() onEditorSave = new EventEmitter<any>();
 
 
   editor;
@@ -23,7 +23,8 @@ export class TextEditorComponent implements AfterViewInit, OnDestroy {
   ngAfterViewInit() {
     tinymce.init({
       selector: '#' + this.elementId,
-      plugins: ['link', 'paste', 'table', 'codesample', 'code', 'save'],
+     // plugins: ['link', 'paste', 'table', 'codesample', 'code', 'save'],
+      plugins: ['link', 'paste', 'table', 'codesample', 'code'],
       codesample_languages: [
         { text: 'HTML/XML', value: 'markup' },
         { text: 'JavaScript', value: 'javascript' },
@@ -41,7 +42,7 @@ export class TextEditorComponent implements AfterViewInit, OnDestroy {
       toolbar: "codesample | code | undo redo | insert | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | save",
       skin_url: '../assets/skins/tinymce/lightgray',
       branding: false,
-      height: 300,
+      height: 700,
       statusbar: false,
       setup: editor => {
         this.editor = editor;
@@ -53,12 +54,15 @@ export class TextEditorComponent implements AfterViewInit, OnDestroy {
           editor.setContent(this.editorContent);
         });
       },
-      save_onsavecallback: () => { this.onEditorSave.emit(this.editor.getContent()) }
+      //save_onsavecallback: () => { this.onEditorSave.emit(this.editor.getContent()) }
     });
   }
-  UpdateContent(content:String)
+  updateText(content:String)
   {
     this.editor.setContent(content);    
+  }
+  getText(): string{
+      return this.editor.getContent();
   }
   ngOnDestroy() {
     tinymce.remove(this.editor);

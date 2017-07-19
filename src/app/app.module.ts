@@ -7,18 +7,19 @@ import { FormsModule } from '@angular/forms'
 
 // Imports for loading & configuring the in-memory web api
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { InMemoryDataService } from './shared/in-memory-data.service'
+import { InMemoryDataService } from './shared/in-memory-data-service/in-memory-data.service'
 
 import { AppComponent } from './app.component';
-import { TextEditorComponent } from "./shared/text-editor.component";
+import { TextEditorComponent } from "./shared/text-editor/text-editor.component";
 import { PostEditComponent } from "./blog/post-edit.component";
-import { PostReadComponent } from "./blog/post-read.component";
+import { PostDisplayComponent } from "./blog/post-display.component";
 import { PostListComponent } from "./blog/post-list.component";
 
 import { AppRoutingModule } from "./app-routing.module";
 import { BlogService } from "./blog/blog.service";
 import { BlogSearchComponent } from "./blog/blog-search.component";
-import { TagAreaComponent } from "./tag-input/tag-area.component";
+import { TagSelectorComponent } from "./shared/tag-input/tag-selector.component";
+
 
 TagInputModule.withDefaults({
   tagInput: {
@@ -35,10 +36,10 @@ TagInputModule.withDefaults({
     AppComponent,
     TextEditorComponent,
     PostEditComponent,
-    PostReadComponent,
+    PostDisplayComponent,
     PostListComponent,
     BlogSearchComponent,
-    TagAreaComponent
+    TagSelectorComponent
   ],
   imports: [
     BrowserModule,
