@@ -4,12 +4,14 @@
     </div>
     <div [innerHTML]=+activePost.Body>
     </div>
+    <!-- <div>
+        <tag-area [items]="activePost.Tags"> </tag-area>
+    </div> -->
     <div>
         <div>
-            <span *ngFor="let tag of activePost.Tags">
-        {{tag.name}}
-        </span>
+            {{joinTags()}}
         </div>
+
         <button class="edit" (click)="editPost(); $event.stopPropagation()">edit</button>
         <div>
         </div>

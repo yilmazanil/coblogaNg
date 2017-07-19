@@ -1,8 +1,9 @@
-import { BlogPostTag } from "./blog-post-tag";
+
+import { BlogPostTag } from "../shared/tag-input/blog-post-tag";
 
 export class BlogPost {
-  id: number;
-  Heading : string;
-  Body: string;
+  id: Number;
+  Heading : String;
+  Body: String;
   Tags: BlogPostTag[];
 }
