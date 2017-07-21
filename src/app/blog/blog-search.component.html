@@ -1,10 +1,23 @@
 <div id="search-component">
-    <h2>Blog  Search</h2>
+    <h2>Blog Search</h2>
     <input #searchBox id="search-box" (keyup)="search(searchBox.value)" />
     <div>
-        <div *ngFor="let post of blogPosts | async" class="search-result">
-            <button class="read" (click)="gotoDetail(post); $event.stopPropagation()">read</button>
-            {{post.Body}} 
+        <div *ngFor="let post of blogPosts | async" class='row'>
+            <div class='col-md-6'>
+                <div class='row'>
+                    <div class='col-md-6' (click)="gotoDetail(post);" ><strong>{{post.id}} {{post.Heading}}</strong></div>
+                </div>
+                <div class='row'>
+                    <div class='col-md-6'>{{post.Body}}</div>
+                </div>
+                <div class='row'>
+                    <div class='col-md-6'> 
+                        <span *ngFor="let tag of post.Tags">
+                    {{tag.name}}
+                    </span>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
