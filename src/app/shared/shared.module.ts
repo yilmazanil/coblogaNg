@@ -10,21 +10,21 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 TagInputModule.withDefaults({
-  tagInput: {
+    tagInput: {
         placeholder: 'Yeni Etiket',
         identifyBy: 'id',
-        displayBy : 'name',
-        maxItems : 10,
-        animationDuration : {enter: '0ms', leave: '0ms'}
+        displayBy: 'name',
+        maxItems: 10,
+        animationDuration: { enter: '0ms', leave: '0ms' }
     }
 });
 
 
 @NgModule({
-    imports: [CommonModule ,
-         FormsModule,
-         TagInputModule,
-         BrowserAnimationsModule],
+    imports: [CommonModule,
+        FormsModule,
+        TagInputModule,
+        BrowserAnimationsModule],
     exports: [
         CommonModule,
         FormsModule,
@@ -32,7 +32,7 @@ TagInputModule.withDefaults({
         TagSelectorComponent
     ],
     declarations: [
-        TextEditorComponent, 
+        TextEditorComponent,
         TagSelectorComponent],
 })
 export class SharedModule { }

@@ -1,5 +1,6 @@
 import { Component, Input } from "@angular/core";
 import { BlogPostTag } from "./blog-post-tag";
+import { Observable } from "rxjs/Observable";
 
 @Component({
     selector: 'tag-area',
@@ -10,5 +11,11 @@ export class TagSelectorComponent {
     getTags():BlogPostTag[]
     {
         return this.items;
+    }
+    onItemAdding(value: string): Observable<BlogPostTag> {
+        let tag = new BlogPostTag();
+        tag.name = value.toLowerCase();
+        tag.id = value.toLowerCase();
+        return Observable.of(tag);
     }
 }

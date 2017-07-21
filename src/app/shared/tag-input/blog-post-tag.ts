@@ -1,5 +1,5 @@
 export class BlogPostTag {
-  id: Number;
+  id: String;
   name : String;
   //readonly: Boolean;
 }
