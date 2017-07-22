@@ -6,13 +6,11 @@ import { PostListComponent } from "./post-list.component";
 import { BlogSearchComponent } from "./blog-search.component";
 import { BlogService } from "./blog.service";
 import { PostDisplayGuardService } from "./post-display-guard.service";
-import { BlogPostRoutingModule } from "./blog-post-routing.module";
 import { SharedModule } from "../shared/shared.module";
 
 @NgModule({
   imports: [
     SharedModule,
-    BlogPostRoutingModule
   ],
   declarations: [
     PostEditComponent,
@@ -22,6 +20,10 @@ import { SharedModule } from "../shared/shared.module";
   ],
   providers: [
     BlogService
+  ],
+  exports:[
+    BlogSearchComponent,
+    PostListComponent
   ]
 })
 export class BlogPostModule { }

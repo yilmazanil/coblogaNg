@@ -6,7 +6,9 @@ import { TagSelectorComponent } from "./tag-input/tag-selector.component";
 
 import { TagInputModule } from 'ngx-chips';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { AlertService } from "./common/alert.service";
+import { UserService } from "./common/user.service";
+import { AuthenticationService } from "./common/authentication.service";
 
 
 TagInputModule.withDefaults({
@@ -34,5 +36,10 @@ TagInputModule.withDefaults({
     declarations: [
         TextEditorComponent,
         TagSelectorComponent],
+    providers : [
+        AlertService,
+        UserService,
+        AuthenticationService
+    ]
 })
 export class SharedModule { }
